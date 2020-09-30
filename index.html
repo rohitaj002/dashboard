@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" >
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function openSlideMenu() {
+      document.getElementById('menu').style.width = '250px';
+      document.getElementById('content').style.marginLeft = '250px';
+      // document.getElementById('content').style.width="calc(100%-250px)";
+    }
+    function closeSlideMenu() {
+      document.getElementById('menu').style.width = '0';
+      document.getElementById('content').style.marginLeft = '0';
+      // document.getElementById('content').style.width = '100vw';
+    }
+  </script>
+
+
+</head>
+
+<body>
+  <div id="content" >
+    <div id="hed">
+      <span class="slide">
+
+        <a href="#" onclick="openSlideMenu()">
+          <i class="fas fa-bars"></i>
+
+        </a>
+
+        <span>Desktop</span>
+      </span>
+
+
+      <div id="menu" class="nav">
+        <a href="#" class="close" onclick="closeSlideMenu()">
+          <i class="fas fa-times"></i>
+        </a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="container-fluid" onclick="closeSlideMenu()">
+      <div class="row"  >
+        <div class="col col-md-6 ">
+          <h2 align="center">High Chart</h2>
+          <figure class="highcharts-figure">
+            <div id="container1"></div>
+            <p class="highcharts-description">
+              This chart shows how data labels can be added to the data series. This
+              can increase readability and comprehension for small datasets.
+            </p>
+          </figure>
+
+        </div>
+        <div class="col col-md-5">
+          <h2 align="center">High Chart- 2</h2>
+          <figure class="highcharts-figure">
+            <div id="container"></div>
+            <p class="highcharts-description">
+              Variable radius pie charts can be used to visualize a
+              second dimension in a pie chart. In this chart, the more
+              densely populated countries are drawn further out, while the
+              slice width is determined by the size of the country.
+            </p>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+
+
+
+</body>
+
+</html>
